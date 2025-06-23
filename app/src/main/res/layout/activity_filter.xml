@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121858"
+    android:padding="16dp">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="40px"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Назад"
+            android:layout_marginStart="25dp"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/montserrat_bold"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="250dp"
+            android:layout_gravity="end"
+            android:contentDescription="Логотип"
+            android:scaleType="centerInside"
+            android:src="@drawable/logo" />
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/filterTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Фильтр дневника снов"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="75dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:layout_below="@id/backButton"/>
+
+    <TextView
+        android:id="@+id/searchLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/filterTitle"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:text="Поиск по ключевым словам"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/montserrat_bold" />
+
+    <EditText
+        android:id="@+id/searchEditText"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/searchLabel"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="10dp"
+        android:hint="Введите слово или фразу"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#AAAAAA"
+        android:background="@drawable/edit_text_background"
+        android:padding="10dp"
+        android:fontFamily="@font/montserrat_medium" />
+
+    <TextView
+        android:id="@+id/dateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchEditText"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:text="Дата"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/montserrat_bold" />
+
+    <LinearLayout
+        android:id="@+id/topDateButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dateLabel"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/btnRecent"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:text="недавно"
+            android:background="@drawable/filter_button_unselected"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/montserrat_bold" />
+
+        <Button
+            android:id="@+id/btnThisWeek"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="2"
+            android:text="на этой неделе"
+            android:background="@drawable/filter_button_unselected"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/montserrat_bold" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnThisMonth"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/topDateButtons"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:text="в этом месяце"
+        android:background="@drawable/filter_button_unselected"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/montserrat_bold" />
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:layout_below="@id/btnThisMonth"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:text="Сбросить фильтры"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/montserrat_bold"
+        android:background="@drawable/filter_button_selected" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/resetButton"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:text="Сохранить"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/montserrat_bold"
+        android:background="@drawable/filter_button_selected" />
+</RelativeLayout>

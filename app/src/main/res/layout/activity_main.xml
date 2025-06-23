@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background">
+
+    <ImageView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:adjustViewBounds="true"
+        android:maxWidth="165dp"
+        android:src="@drawable/vectormain"/>
+
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Добро пожаловать, Имя!"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/recordSleepButton"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@id/welcomeText"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="35dp"
+        android:background="@drawable/round_gradient"
+        android:drawableEnd="@drawable/ic_sleep_record"
+        android:drawablePadding="16dp"
+        android:drawableTint="#FFFFFF"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="top|start"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="60dp"
+        android:paddingBottom="16dp"
+        android:text="Запись сна"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recordSleepButton"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="35dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:id="@+id/viewDiaryButton"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/round_gradient"
+            android:paddingStart="16dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="15dp">
+
+            <TextView
+                android:id="@+id/diaryText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Просмотр дневника"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/ic_diary_view"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/analyzeSleepButton"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/round_gradient"
+            android:paddingStart="16dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="15dp">
+
+            <TextView
+                android:id="@+id/analyzeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Анализ сна"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/ic_sleep_analyze"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="#000000"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:paddingHorizontal="8dp"
+        android:layout_gravity="bottom"
+        android:id="@+id/bottom_navigation"
+        android:fitsSystemWindows="true">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="4dp">
+
+            <ImageView
+                android:id="@+id/navHome"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:contentDescription="Главная"
+                android:scaleType="centerInside"
+                android:src="@drawable/home123"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="4dp">
+
+            <ImageView
+                android:id="@+id/navAnalyze"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:contentDescription="Анализ"
+                android:scaleType="centerInside"
+                android:src="@drawable/analyze123"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="4dp">
+
+            <ImageView
+                android:id="@+id/navSettings"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:contentDescription="Настройки"
+                android:scaleType="centerInside"
+                android:src="@drawable/settings123"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="4dp">
+
+            <ImageView
+                android:id="@+id/navProfile"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:contentDescription="Профиль"
+                android:scaleType="centerInside"
+                android:src="@drawable/profile123"/>
+        </FrameLayout>
+    </LinearLayout>
+</RelativeLayout>

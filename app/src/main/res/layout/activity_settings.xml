@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121858"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Назад"
+            android:layout_marginStart="25dp"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/montserrat_bold"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="250dp"
+            android:layout_gravity="end"
+            android:contentDescription="Логотип"
+            android:scaleType="centerInside"
+            android:src="@drawable/logo"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/settingsTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Настройки"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/header"
+        android:fontFamily="@font/montserrat_bold"/>
+
+    <TextView
+        android:id="@+id/musicLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Выбор музыки"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/settingsTitle"
+        android:fontFamily="@font/montserrat_bold"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/musicLabel"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/sound1"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:text="звук 1"
+            android:background="@drawable/filter_button_unselected"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/montserrat_bold"/>
+
+        <Button
+            android:id="@+id/sound2"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:text="звук 2"
+            android:background="@drawable/filter_button_unselected"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/montserrat_bold"/>
+
+        <Button
+            android:id="@+id/sound3"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:text="звук 3"
+            android:background="@drawable/filter_button_unselected"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/montserrat_bold"/>
+
+        <Button
+            android:id="@+id/sound4"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="звук 4"
+            android:background="@drawable/filter_button_unselected"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/montserrat_bold"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:text="Сохранить"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/montserrat_bold"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackground"
+        android:padding="16dp"/>
+</RelativeLayout>

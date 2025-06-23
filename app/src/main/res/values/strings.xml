@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Somnium</string>
+    <string name="app_logo">Логотип приложения</string>
+    <string name="username_label">Логин</string>
+    <string name="username_hint">Введите ваш логин</string>
+    <string name="password_label">Пароль</string>
+    <string name="password_hint">Введите пароль</string>
+    <string name="login_button">Войти</string>
+    <string name="create_account_text">Нет аккаунта? Создать</string>
+    <string name="records_count">Записей: %d</string>
+</resources>
